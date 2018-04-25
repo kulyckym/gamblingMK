@@ -5,5 +5,35 @@
 		<title>CSGO Roulette</title>
 	<head>
 			<body style="background-color:black;">
+				<center class="title">Roulette </center>
+			<input type = "number"  min= "1"  placeholder = "Enter Bet Red" id ="r">
+			<input type = "number" min= "1"  placeholder = "Enter Bet Black" id ="b">
+			<input type = "number" min= "1"  placeholder = "Enter Bet Green" id ="g">
+			<input type = "button" value = "Confirm Bet" onclick = "Odds()">
+		<script>
+		var x = Math.floor(Math.random () * 101);
+			function Odds()		{
+				return x
+					let r = document.getElementById("r").value;
+					let b = document.getElementById("b").value;
+					let g = document.getElementById("g").value;
+					r = Number(r)
+					b = Number(b)
+					g = Number(g)
+				if x >=1<=46 {
+					r= r*2
+					return r
+				}
+				else if x >46<55 {
+					g= g*12.5
+					return g
+				}
+				else x >54 {
+					b= b*2
+					return b 
+				}
+				
+								}
+		</script>
 <html>
 
