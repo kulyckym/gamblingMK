@@ -7,44 +7,39 @@
 			<body style="background-color:black;">
 				<center class="title">Roulette </center>
 				<br><br><br>
-			<input type = "number"  class= "p1" min= "1"  placeholder = "Enter Bet Red" id ="r">
+			<input type = "number" min= "1"  placeholder = "Enter Bet Red" id ="r">
 			<input type = "number" min= "1"  placeholder = "Enter Bet Black" id ="b">
 			<input type = "number" min= "1"  placeholder = "Enter Bet Green" id ="g">
 			<input type = "button" value = "Confirm Bet" onclick = "Odds()">
 				<br><br><br>
 				<p class="info"> Odds: Red: 45%, Black: 45%, Green: 10% </p>
-		
-		
-		
-		
 		<script>
 		var x = Math.floor(Math.random () * 101);
+		var cash = 1000
+			function Odds()		{
 					let r = document.getElementById("r").value;
 					let b = document.getElementById("b").value;
 					let g = document.getElementById("g").value;
-			function Odds()		{
-				return x
 					r = Number(r)
 					b = Number(b)
 					g = Number(g)
 				if (x >=1 && x <=45) {
 					r= r*2;
+					cash= cash+r-g-b	
 				}
-				else if (x <55) {
+				else if (x >55) {
 					b= b*2;
+					cash= cash+b-r-g	
 				}
 				else  {
-					b= b*10;
+					g= g*10;
+					cash= cash+g-r-b
 				}
-			
-								}
 				console.log(r)
 				console.log(b)
 				console.log(g)
 				console.log(x)
-				
+				console.log(cash)
+								}
 		</script>
 <html>
-
-
-
