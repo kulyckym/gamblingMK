@@ -13,10 +13,11 @@
 			<input type = "button" value = "Confirm Bet" onclick = "Odds()">
 				<br><br><br>
 				<p class="info"> Odds: Red: 45%, Black: 45%, Green: 10% </p>
+				<p class="info"document.getElementById ("cash")> Dollars </p>
 		<script>
-		var x = Math.floor(Math.random () * 101);
 		var cash = 1000
 			function Odds()		{
+			var x = Math.floor(Math.random () * 101);
 					let r = document.getElementById("r").value;
 					let b = document.getElementById("b").value;
 					let g = document.getElementById("g").value;
@@ -25,15 +26,15 @@
 					g = Number(g)
 				if (x >=1 && x <=45) {
 					r= r*2;
-					cash= cash+r-g-b	
+					cash= cash+r/2-g-b	
 				}
 				else if (x >55) {
 					b= b*2;
-					cash= cash+b-r-g	
+					cash= cash+b/2-r-g	
 				}
 				else  {
 					g= g*10;
-					cash= cash+g-r-b
+					cash= cash+g/10*9-r-b
 				}
 				console.log(r)
 				console.log(b)
