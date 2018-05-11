@@ -3,3 +3,11 @@
 	font-family: Consolas, monaco, monospace;
 	font-size: 40px;	
 }
+.info{
+	color:yellow;
+	font-family: Consolas, monaco, monospace;
+	font-size: 20px;
+}
+.p1{
+	float: left;
+}
