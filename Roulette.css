@@ -1,3 +1,8 @@
+body{
+	background-image: url("https://images8.alphacoders.com/570/570408.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;	
+}
 .title{
 	color: yellow;
 	font-family: Consolas, monaco, monospace;
