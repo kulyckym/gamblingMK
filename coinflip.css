@@ -1,0 +1,18 @@
+body{
+	background-image: url("https://images6.alphacoders.com/570/thumb-1920-570413.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;	
+}
+.title{
+	color: yellow;
+	font-family: Consolas, monaco, monospace;
+	font-size: 40px;	
+}
+.info{
+	color:yellow;
+	font-family: Consolas, monaco, monospace;
+	font-size: 20px;
+}
+.p1{
+	float: left;
+}
