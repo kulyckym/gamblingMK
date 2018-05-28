@@ -7,16 +7,20 @@
 			<body style="background-color:black;">
 				<center class="title">Roulette </center>
 				<br><br><br>
-			<input type = "number" min= "1"  placeholder = "Enter Bet Red" id ="r">
-			<input type = "number" min= "1"  placeholder = "Enter Bet Black" id ="b">
-			<input type = "number" min= "1"  placeholder = "Enter Bet Green" id ="g">
+			<input type = "number" min= "1"  max="cash" placeholder = "Enter Bet Red" id ="r">
+			<input type = "number" min= "1"  max="cash" placeholder = "Enter Bet Black" id ="b">
+			<input type = "number" min= "1"  max="cash" placeholder = "Enter Bet Green" id ="g">
 			<input type = "button" value = "Confirm Bet" onclick = "Odds()">
 				<br><br><br>
 				<p class="info"> Odds: Red: 45%, Black: 45%, Green: 10% </p>
-				<p class="info"document.getElementById ("cash")> Dollars </p>
+				<br><br>
+				<p class="info"> You have </p>
+				<p class="info"> <span id="change"></span> Dollars </p>
 		<script>
+		
 		var cash = 1000
-			function Odds()		{
+			document.getElementById("change").innerHTML=cash		
+		function Odds()		{
 			var x = Math.floor(Math.random () * 101);
 					let r = document.getElementById("r").value;
 					let b = document.getElementById("b").value;
@@ -41,6 +45,8 @@
 				console.log(g)
 				console.log(x)
 				console.log(cash)
+				document.getElementById("change").innerHTML=cash
 								}
 		</script>
 <html>
+
