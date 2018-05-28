@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link href="coinflip.css" type ="text/css" rel= stylesheet>
+		<title> CSGO Coinfip </title>
+	<head>
+<body style="background-color:black;">
+	<center class="title">Coinflip</center>
+			<input type = "number" min= "1"  max="cash" placeholder = "Enter Bet CT" id ="ct">
+			<input type = "number" min= "1"  max="cash" placeholder = "Enter Bet T" id ="t">
+			<input type = "button" value = "Confirm Bet" onclick = "Odds()">
+				<br><br><br>
+				<p class="info"> Odds: CT Side 50%, T Side: 50%</p>
+				<br><br>
+				<p class="info"> You have </p>
+				<p class="info"> <span id="change"></span> Dollars </p>
+		<script>
+		
+		var cash = 1000
+			document.getElementById("change").innerHTML=cash		
+		function Odds()		{
+			var x = Math.floor(Math.random () * 101);
+					let t = document.getElementById("t").value;
+					let ct = document.getElementById("ct").value;
+					t = Number(t)
+					ct = Number(ct)
+				if (x >=1 && x <=50) {
+					t= t*2;
+					cash= cash+r/2-g-b	
+				}
+				else if (x >50) {
+					ct= ct*2;
+					cash= cash+b/2-r-g	
+				}
+				console.log(t)
+				console.log(ct)
+				console.log(x)
+				console.log(cash)
+				document.getElementById("change").innerHTML=cash
+								}
+		</script>
+	
