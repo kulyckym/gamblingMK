@@ -4,11 +4,11 @@
 				<link href="Roulette.css" type="text/css" rel="stylesheet">
 				<h1 class= "title" >Choose a Side</h1>
 				<label class="info">CT Side
-				  <input type="radio" checked="checked" name="radio">
+				  <input type="radio" checked="checked" name="radio" id ="ct">
 				  <span class="checkmark"></span>
 				</label>
 				<label class="info">T side
-				  <input type="radio" name="radio">
+				  <input type="radio" name="radio" id ="t">
 				  <span class="checkmark"></span>
 				</label>
 				<!-- -->
@@ -17,7 +17,6 @@
 				<!-- -->
 		<input type = "number" min= "1"  max="cash" placeholder = "Enter Bet Amount" id ="bet">
 			<style>
-		/* The container */
 		.container {
 			display: block;
 			position: relative;
@@ -30,15 +29,11 @@
 			-ms-user-select: none;
 			user-select: none;
 		}
-
-		/* Hide the browser's default radio button */
 		.container input {
 			position: absolute;
 			opacity: 0;
 			cursor: pointer;
 		}
-
-		/* Create a custom radio button */
 		.checkmark {
 			position: absolute;
 			top: 0;
@@ -48,30 +43,20 @@
 			background-color: #eee;
 			border-radius: 50%;
 		}
-
-		/* On mouse-over, add a grey background color */
 		.container:hover input ~ .checkmark {
 			background-color: #ccc;
 		}
-
-		/* When the radio button is checked, add a blue background */
 		.container input:checked ~ .checkmark {
 			background-color: #2196F3;
 		}
-
-		/* Create the indicator (the dot/circle - hidden when not checked) */
 		.checkmark:after {
 			content: "";
 			position: absolute;
 			display: none;
 		}
-
-		/* Show the indicator (dot/circle) when checked */
 		.container input:checked ~ .checkmark:after {
 			display: block;
 		}
-
-		/* Style the indicator (dot/circle) */
 		.container .checkmark:after {
 			top: 9px;
 			left: 9px;
@@ -80,6 +65,7 @@
 			border-radius: 50%;
 			background: white;
 		}
+		
 				</style>
 <script>
 document.getElementById('timer').innerHTML =
@@ -102,5 +88,31 @@ function checkSecond(sec) {
   return sec;
 }
 </script>
+				<p class="info"> You have </p>
+				<p class="info"> <span id="change"></span> Dollars </p>
+<script>
+		
+		var cash = 1000
+			document.getElementById("change").innerHTML=cash		
+		function Odds()		{
+			var x = Math.floor(Math.random () * 101);
+					let ct = document.getElementById("ct").value;
+					let t = document.getElementById("t").value;
+					ct = Number(ct)
+					t = Number(t)
+				if (x >=1 && x <=45) {
+					r= r*2;
+					cash= cash+r/2-g-b	
+				}
+				else if (x >55) {
+					b= b*2;
+					cash= cash+b/2-r-g	
+				}
+				console.log(ct)
+				console.log(t)
+				console.log(cash)
+				document.getElementById("change").innerHTML=cash
+								}
+		</script>
 
 </html>
