@@ -30,7 +30,6 @@ function startTimer() {
     m + ":" + s;
   setTimeout(startTimer, 1000);
 }
-
 function checkSecond(sec) {
   if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
   if (sec == -1) timer.cancel();
@@ -44,16 +43,16 @@ function checkSecond(sec) {
 			document.getElementById("bet").innerHTML=cash		
 		function Odds()		{
 			var x = Math.floor(Math.random () * 101);
-					let ct = document.getElementById("ct").value;
-					let t = document.getElementById("t").value;
+					let ct = document.getElementById("ct").checked;
+					let t = document.getElementById("t").checked;
 					ct = Number(ct)
 					t = Number(t)
-				if (x >=1 && x <=45) {
-					r= r*2;
-					cash= cash+r/2-g-b	
+				if (x >=50 && t) {
+					bet= bet*2;
+					cash= cash+
 				}
-				else if (x >55) {
-					b= b*2;
+				else if (x <50 && t) {
+					bet= bet*2;
 					cash= cash+b/2-r-g	
 				}
 				console.log(ct)
